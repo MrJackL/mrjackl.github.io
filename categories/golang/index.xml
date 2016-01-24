@@ -11,10 +11,10 @@
     
     <item>
       <title>CocoaPods使用技巧</title>
-      <link>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <link>http://mrjackl.github.io/post/file3/</link>
       <pubDate>Sun, 24 Jan 2016 17:30:05 +0800</pubDate>
       
-      <guid>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <guid>http://mrjackl.github.io/post/file3/</guid>
       <description>&lt;p&gt;安装和基本使用CocoaPods是十分简单的事情，但是在日常项目当中难免会出现一些奇葩状况，以下列出可能遇到的问题，以及解决办法。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;1. 执行pod install 或者 pod update 一直卡住不动，并提示Updating local specs repositories&lt;/strong&gt; ; (也许是被墙了)这个时候需要执行以下脚本:&lt;/p&gt;
@@ -42,10 +42,10 @@ pod repo update --verbose
     
     <item>
       <title>CocoaPods使用教程</title>
-      <link>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <link>http://mrjackl.github.io/post/file2/</link>
       <pubDate>Sun, 24 Jan 2016 17:27:53 +0800</pubDate>
       
-      <guid>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>http://mrjackl.github.io/post/file2/</guid>
       <description>&lt;p&gt;在Github上有很多开源的iOS项目，大部分都支持pods,那么我们该如何将大神们的开源库，通过CocoaPods集成到我们自己的项目中呢？&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;1. 生成Podfile&lt;/strong&gt;&lt;/p&gt;
@@ -93,10 +93,10 @@ pod &amp;quot;AFNetworking&amp;quot;
     
     <item>
       <title>CocoaPods安装</title>
-      <link>http://mrjackl.github.io/CocoaPods%E5%AE%89%E8%A3%85/</link>
+      <link>http://mrjackl.github.io/post/file1/</link>
       <pubDate>Sun, 24 Jan 2016 17:15:39 +0800</pubDate>
       
-      <guid>http://mrjackl.github.io/CocoaPods%E5%AE%89%E8%A3%85/</guid>
+      <guid>http://mrjackl.github.io/post/file1/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;介绍&lt;/p&gt;
 
