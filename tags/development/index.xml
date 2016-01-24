@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on MrJackL</title>
+    <link>http://mrjackl.github.io/tags/development/</link>
+    <description>Recent content in Development on MrJackL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Jan 2016 17:30:05 +0800</lastBuildDate>
+    <atom:link href="http://mrjackl.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CocoaPods使用技巧</title>
+      <link>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sun, 24 Jan 2016 17:30:05 +0800</pubDate>
+      
+      <guid>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>&lt;p&gt;安装和基本使用CocoaPods是十分简单的事情，但是在日常项目当中难免会出现一些奇葩状况，以下列出可能遇到的问题，以及解决办法。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 执行pod install 或者 pod update 一直卡住不动，并提示Updating local specs repositories&lt;/strong&gt; ; (也许是被墙了)这个时候需要执行以下脚本:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod install --verbose --no-repo-update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod update --verbose --no-repo-update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 使用pod search 或者pod update 时，查询出的第三方库版本低于实际版本；&lt;/strong&gt; 逐个执行以下脚本:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install ruby
+
+sudo gem install cocoapods
+
+pod setup
+
+pod repo update --verbose
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CocoaPods使用教程</title>
+      <link>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 24 Jan 2016 17:27:53 +0800</pubDate>
+      
+      <guid>http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>&lt;p&gt;在Github上有很多开源的iOS项目，大部分都支持pods,那么我们该如何将大神们的开源库，通过CocoaPods集成到我们自己的项目中呢？&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 生成Podfile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;首先创建一个iOS项目Demo, 打开Terminal，并输入 cd , 然后将项目文件夹拖入到Terminal，然后Enter；这样就进入到了项目的路径下，&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://img.blog.csdn.net/20160119194832283&#34; alt=&#34;这里写图片描述&#34; /&gt;
+然后输入以下脚本：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;touch Podfile
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此时在你的项目文件夹中就会生成一个Podfile文件 ;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.编辑Podfile&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;双击打开Podfile, 将以下内容保存到Podfile中:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;platform :ios, &#39;7.0&#39;
+
+pod &amp;quot;AFNetworking&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 执行install&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在Terminal 中cd 项目路径,执行以下脚本:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod install --verbose --no-repo-update 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod update --verbose --no-repo-update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;耐心等待几秒，脚本执行完成后，去项目路径下查看，会多出3个文件，如下图:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://img.blog.csdn.net/20160119200539173&#34; alt=&#34;这里写图片描述&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果执行结果和这个一样，就代表第三方库已经引用成功了！另外，这里需要注意是的，以后启动项目就要双击&lt;strong&gt;xcworkspace&lt;/strong&gt;文件了。&lt;/p&gt;
+
+&lt;p&gt;这里只是以AFNetworking为例，当然如果你需要在项目中引用其他第三方库，只需要编辑Podfile，将你需要的第三方库pods加入到Podfile文件中，然后执行install或者update 。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CocoaPods安装</title>
+      <link>http://mrjackl.github.io/CocoaPods%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sun, 24 Jan 2016 17:15:39 +0800</pubDate>
+      
+      <guid>http://mrjackl.github.io/CocoaPods%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;介绍&lt;/p&gt;
+
+&lt;p&gt;CocoaPods是iOS中使用最受欢迎的第三方库管理工具，使iOS开发者的对项目的管理变得更加简单；现在有了CocoaPods,就可以通过一段更新脚本就完成了所有第三方类库的更新；而且在Github上有很多开源的项目，大多都支持pods。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;前提:Ruby环境&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;需要先安装好Ruby环境，这里就不详细介绍了，链接说的很清楚。&lt;a href=&#34;https://ruby-china.org/wiki/install_ruby_guide&#34;&gt;https://ruby-china.org/wiki/install_ruby_guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安装CocoaPods&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;安装好Ruby环境后，打开Terminal(终端)，理论上只要运行以下脚本就可以安装好CocoaPods:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt; sudo gem install cocoapods
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但是cocoapods.org被墙了，只好用淘宝的Ruby镜像来访问cocoapods 。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gem sources --remove https://rubygems.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上脚本执行完成后，再执行以下脚本:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem sources -a http://ruby.taobao.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以通过以下脚本验证你刚才使用的Ruby镜像是taobao:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem sources -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这个时候，你只需要在Terminal中运行：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo gem install cocoapods
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;坐等一会，CocoaPods就在你本地下载并且安装好了，大功告成！&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

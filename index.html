@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.14" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> MrJackL &middot; MrJackL </title>
+
+  
+  <link rel="stylesheet" href="http://mrjackl.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mrjackl.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://mrjackl.github.io/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="http://mrjackl.github.io/index.xml" rel="alternate" type="application/rss+xml" title="MrJackL" />
+</head>
+
+<body class="">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://mrjackl.github.io/"><h1>MrJackL</h1></a>
+      <p class="lead">
+       这里是MrJackL的个人博客 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/CocoaPods%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"> CocoaPods使用技巧 </a></li>
+      
+        <li><a href="/CocoaPods%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"> CocoaPods使用教程 </a></li>
+      
+        <li><a href="/CocoaPods%E5%AE%89%E8%A3%85/"> CocoaPods安装 </a></li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="posts">
+
+      
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        CocoaPods使用技巧
+      </a>
+    </h1>
+
+    <span class="post-date">Sun, Jan 24, 2016</span>
+
+    <p>安装和基本使用CocoaPods是十分简单的事情，但是在日常项目当中难免会出现一些奇葩状况，以下列出可能遇到的问题，以及解决办法。</p>
+
+<p><strong>1. 执行pod install 或者 pod update 一直卡住不动，并提示Updating local specs repositories</strong> ; (也许是被墙了)这个时候需要执行以下脚本:</p>
+
+<pre><code>pod install --verbose --no-repo-update
+</code></pre>
+
+<p>或者</p>
+
+<pre><code>pod update --verbose --no-repo-update
+</code></pre>
+
+<p><strong>2. 使用pod search 或者pod update 时，查询出的第三方库版本低于实际版本；</strong> 逐个执行以下脚本:</p>
+
+<pre><code>brew install ruby
+
+sudo gem install cocoapods
+
+pod setup
+
+pod repo update --verbose
+</code></pre>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://mrjackl.github.io/CocoaPods%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+        CocoaPods使用教程
+      </a>
+    </h1>
+
+    <span class="post-date">Sun, Jan 24, 2016</span>
+
+    <p>在Github上有很多开源的iOS项目，大部分都支持pods,那么我们该如何将大神们的开源库，通过CocoaPods集成到我们自己的项目中呢？</p>
+
+<p><strong>1. 生成Podfile</strong></p>
+
+<p>首先创建一个iOS项目Demo, 打开Terminal，并输入 cd , 然后将项目文件夹拖入到Terminal，然后Enter；这样就进入到了项目的路径下，</p>
+
+<p><img src="http://img.blog.csdn.net/20160119194832283" alt="这里写图片描述" />
+然后输入以下脚本：</p>
+
+<pre><code>touch Podfile
+</code></pre>
+
+<p>此时在你的项目文件夹中就会生成一个Podfile文件 ;</p>
+
+<p><strong>2.编辑Podfile</strong></p>
+
+<p>双击打开Podfile, 将以下内容保存到Podfile中:</p>
+
+<pre><code>platform :ios, '7.0'
+
+pod &quot;AFNetworking&quot;
+</code></pre>
+
+<p><strong>3. 执行install</strong></p>
+
+<p>在Terminal 中cd 项目路径,执行以下脚本:</p>
+
+<pre><code>pod install --verbose --no-repo-update 
+</code></pre>
+
+<p>或者</p>
+
+<pre><code>pod update --verbose --no-repo-update
+</code></pre>
+
+<p>耐心等待几秒，脚本执行完成后，去项目路径下查看，会多出3个文件，如下图:</p>
+
+<p><img src="http://img.blog.csdn.net/20160119200539173" alt="这里写图片描述" /></p>
+
+<p>如果执行结果和这个一样，就代表第三方库已经引用成功了！另外，这里需要注意是的，以后启动项目就要双击<strong>xcworkspace</strong>文件了。</p>
+
+<p>这里只是以AFNetworking为例，当然如果你需要在项目中引用其他第三方库，只需要编辑Podfile，将你需要的第三方库pods加入到Podfile文件中，然后执行install或者update 。</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://mrjackl.github.io/CocoaPods%E5%AE%89%E8%A3%85/">
+        CocoaPods安装
+      </a>
+    </h1>
+
+    <span class="post-date">Sun, Jan 24, 2016</span>
+
+    <ul>
+<li><p>介绍</p>
+
+<p>CocoaPods是iOS中使用最受欢迎的第三方库管理工具，使iOS开发者的对项目的管理变得更加简单；现在有了CocoaPods,就可以通过一段更新脚本就完成了所有第三方类库的更新；而且在Github上有很多开源的项目，大多都支持pods。</p>
+
+<ul>
+<li><strong>前提:Ruby环境</strong></li>
+</ul>
+
+<p>需要先安装好Ruby环境，这里就不详细介绍了，链接说的很清楚。<a href="https://ruby-china.org/wiki/install_ruby_guide">https://ruby-china.org/wiki/install_ruby_guide</a></p>
+
+<ul>
+<li><strong>安装CocoaPods</strong></li>
+</ul>
+
+<p>安装好Ruby环境后，打开Terminal(终端)，理论上只要运行以下脚本就可以安装好CocoaPods:</p></li>
+</ul>
+
+<pre><code> sudo gem install cocoapods
+</code></pre>
+
+<p>但是cocoapods.org被墙了，只好用淘宝的Ruby镜像来访问cocoapods 。</p>
+
+<pre><code> gem sources --remove https://rubygems.org/
+</code></pre>
+
+<p>以上脚本执行完成后，再执行以下脚本:</p>
+
+<pre><code>gem sources -a http://ruby.taobao.org/
+</code></pre>
+
+<p>可以通过以下脚本验证你刚才使用的Ruby镜像是taobao:</p>
+
+<pre><code>gem sources -l
+</code></pre>
+
+<p>这个时候，你只需要在Terminal中运行：</p>
+
+<pre><code>$ sudo gem install cocoapods
+</code></pre>
+
+<p>坐等一会，CocoaPods就在你本地下载并且安装好了，大功告成！</p>
+
+  </div>
+  
+</div>
+</div>
+
+  </body>
+</html>
