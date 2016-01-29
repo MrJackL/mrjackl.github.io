@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> CocoaPods使用技巧 &middot; MrJackL </title>
+  <title> iOS入门-第三方库使用 &middot; MrJackL </title>
 
   
   <link rel="stylesheet" href="http://mrjackl.github.io/css/poole.css">
@@ -74,31 +74,9 @@
 
 		<div class="content container">
 			<div class="post">
-			 	<h1>CocoaPods使用技巧</h1>
-			  <span class="post-date">Sun, Jan 24, 2016</span>
-			      <p>安装和基本使用CocoaPods是十分简单的事情，但是在日常项目当中难免会出现一些奇葩状况，以下列出可能遇到的问题，以及解决办法。</p>
-
-<p><strong>1. 执行pod install 或者 pod update 一直卡住不动，并提示Updating local specs repositories</strong> ; (也许是被墙了)这个时候需要执行以下脚本:</p>
-
-<pre><code>pod install --verbose --no-repo-update
-</code></pre>
-
-<p>或者</p>
-
-<pre><code>pod update --verbose --no-repo-update
-</code></pre>
-
-<p><strong>2. 使用pod search 或者pod update 时，查询出的第三方库版本低于实际版本；</strong> 逐个执行以下脚本:</p>
-
-<pre><code>brew install ruby
-
-sudo gem install cocoapods
-
-pod setup
-
-pod repo update --verbose
-</code></pre>
-
+			 	<h1>iOS入门-第三方库使用</h1>
+			  <span class="post-date">Fri, Jan 29, 2016</span>
+			      
 			</div>
 
 			
