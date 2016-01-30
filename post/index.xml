@@ -121,7 +121,7 @@
 
 &lt;p&gt;iOS App的开发主要是涉及到&lt;strong&gt;UI布局、数据处理、使用第三方库、业务逻辑&lt;/strong&gt; 。(后面会有对应的文章进行讲解) 对于初学者来说，最快理解iOS的方式就是UI布局，在这个过程中不但可以熟悉iOS的语法、控件，而且能带来最明显的成就感。个人建议初学者，可以多创建一些Demo来练手；&lt;/p&gt;
 
-&lt;p&gt;接下来会从iOS开发工具、创建项目、项目结构进行介绍:&lt;/p&gt;
+&lt;p&gt;接下来会从iOS开发工具、创建项目、项目结构、程序启动流程进行介绍:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;1.Xcode&lt;/strong&gt;&lt;/p&gt;
 
@@ -148,11 +148,24 @@
 &lt;img src=&#34;http://mrjackl.github.io/img/iOS_create_project03.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;你在桌面也可以看到Demo文件夹，以及内部的文件。&lt;br&gt;
-&lt;br&gt;AppDelegate: 程序启动执行文件 ;
-&lt;br&gt;Assets.xcassets: 要适配不同分辨率的设备，必须提供不同分辨率的启动图片，以及AppIcon
-&lt;br&gt;Info.plist 程序配置文件
-&lt;br&gt;Main.storyboard 程序视图文件
-&lt;br&gt;.h .m文件: .h文件是指头文件，作用:将方法暴露给外部调用 ;.m文件是指实现文件，作用:内部逻辑，方法实现等等.&lt;/p&gt;
+&lt;br&gt;&lt;code&gt;AppDelegate&lt;/code&gt; 程序启动执行文件 ;
+&lt;br&gt;&lt;code&gt;Assets.xcassets&lt;/code&gt; 要适配不同分辨率的设备，必须提供不同分辨率的启动图片，以及AppIcon
+&lt;br&gt;&lt;code&gt;LaunchScreen.storyboard&lt;/code&gt; 启动视图（俗称:闪屏）
+&lt;br&gt;&lt;code&gt;Main.storyboard&lt;/code&gt; 程序视图文件
+&lt;br&gt;&lt;code&gt;Info.plist&lt;/code&gt; 程序配置文件（配置程序启动时所使用的storyboad文件，还有很多配置信息以后要用到再讲）
+&lt;br&gt;&lt;code&gt;.h .m文件&lt;/code&gt; .h文件是指头文件，作用:将方法暴露给外部调用 ;.m文件是指实现文件，作用:内部逻辑，方法实现等等.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注:如果这里不清楚storyboard，可以查看Apple官网说明 &lt;a href=&#34;https://developer.apple.com/library/ios/recipes/xcode_help-IB_storyboard/Chapters/AboutStoryboards.html&#34;&gt;Storyboard&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.程序启动流程&lt;/strong&gt;
+&lt;br&gt;&lt;br&gt;
+Xcode运行程序的快捷键:&lt;code&gt;Command+R&lt;/code&gt; ;程序启动时，首先会调用&lt;code&gt;AppDelegate&lt;/code&gt;文件中的&lt;code&gt;didFinishLaunchingWithOptions&lt;/code&gt;方法;也许你会觉得奇怪，这个方法里面什么内容都没有为什么模拟器里面会有内容呢？&lt;/p&gt;
+
+&lt;p&gt;刚才在项目结构里面有提到&lt;code&gt;Info.plist&lt;/code&gt;文件，其中&lt;code&gt;Main storyboard file base name&lt;/code&gt;就是绑定了&lt;code&gt;Main.storyboard&lt;/code&gt;,这就意味着程序启动的时候会自动调用这个文件；&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;
 &lt;strong&gt;小结&lt;/strong&gt;&lt;/p&gt;
