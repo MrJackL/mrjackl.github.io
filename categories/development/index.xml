@@ -114,7 +114,7 @@
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;h4 id=&#34;注-本文章适合ios初学者查看:1128338eb7dab140464fd061f086ff2c&#34;&gt;注：本文章适合iOS初学者查看&lt;/h4&gt;
+&lt;h4 id=&#34;注-本文章适合ios初学者查看-本文将以objective-c为例进行讲解:1128338eb7dab140464fd061f086ff2c&#34;&gt;注：本文章适合iOS初学者查看,本文将以Objective-C为例进行讲解.&lt;/h4&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;很多刚接触iOS开发的同学，总是会疑惑到底该如何去学习iOS，该从哪里下手，熟悉哪些方面才算入门了？&lt;/p&gt;
@@ -149,8 +149,15 @@
 
 &lt;p&gt;你在桌面也可以看到Demo文件夹，以及内部的文件。&lt;br&gt;
 &lt;br&gt;AppDelegate: 程序启动执行文件 ;
-&lt;br&gt;Assets.xcassets 程序Icon,启动图片，切图等放置处 ;
-&lt;br&gt;Info.plist 程序配置文件&lt;/p&gt;
+&lt;br&gt;Assets.xcassets: 要适配不同分辨率的设备，必须提供不同分辨率的启动图片，以及AppIcon
+&lt;br&gt;Info.plist 程序配置文件
+&lt;br&gt;Main.storyboard 程序视图文件
+&lt;br&gt;.h .m文件: .h文件是指头文件，作用:将方法暴露给外部调用 ;.m文件是指实现文件，作用:内部逻辑，方法实现等等.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;小结&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;初学者只需按照以上步骤手动操作即可，不必太过刻意去理解每个文件的含义。很多路都是靠走出来的，只有不停的动手操作才会碰到问题，然后去解决问题，最终就有了思考，有了理论。&lt;/p&gt;
 </description>
     </item>
     
