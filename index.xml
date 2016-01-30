@@ -69,7 +69,8 @@
       <pubDate>Fri, 29 Jan 2016 19:23:54 +0800</pubDate>
       
       <guid>http://mrjackl.github.io/post/file8/</guid>
-      <description></description>
+      <description>&lt;p&gt;清晰的逻辑&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -78,7 +79,8 @@
       <pubDate>Fri, 29 Jan 2016 19:23:50 +0800</pubDate>
       
       <guid>http://mrjackl.github.io/post/file7/</guid>
-      <description></description>
+      <description>&lt;p&gt;站在大神的肩膀起步&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -87,7 +89,8 @@
       <pubDate>Fri, 29 Jan 2016 19:22:57 +0800</pubDate>
       
       <guid>http://mrjackl.github.io/post/file6/</guid>
-      <description></description>
+      <description>&lt;p&gt;比不可分的数据&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -96,7 +99,8 @@
       <pubDate>Fri, 29 Jan 2016 19:22:51 +0800</pubDate>
       
       <guid>http://mrjackl.github.io/post/file5/</guid>
-      <description></description>
+      <description>&lt;p&gt;从趣味，成就感说起&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -105,7 +109,49 @@
       <pubDate>Thu, 28 Jan 2016 15:28:47 +0800</pubDate>
       
       <guid>http://mrjackl.github.io/post/file4/</guid>
-      <description></description>
+      <description>
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;h4 id=&#34;注-本文章适合ios初学者查看:1128338eb7dab140464fd061f086ff2c&#34;&gt;注：本文章适合iOS初学者查看&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;很多刚接触iOS开发的同学，总是会疑惑到底该如何去学习iOS，该从哪里下手，熟悉哪些方面才算入门了？&lt;/p&gt;
+
+&lt;p&gt;iOS App的开发主要是涉及到&lt;strong&gt;UI布局、数据处理、使用第三方库、业务逻辑&lt;/strong&gt; 。(后面会有对应的文章进行讲解) 对于初学者来说，最快理解iOS的方式就是UI布局，在这个过程中不但可以熟悉iOS的语法、控件，而且能带来最明显的成就感。个人建议初学者，可以多创建一些Demo来练手；&lt;/p&gt;
+
+&lt;p&gt;接下来会从iOS开发工具、创建项目、项目结构进行介绍:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.Xcode&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Xcode是iOS开发工具，有自带模拟器，可以方便的进行调试，有各种分辨率的模拟设备;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;现在来安装Xcode, 在Mac App Store中搜索&amp;rdquo;Xcode&amp;rdquo;，安装即可；（不过下载速度确实会有点慢）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.创建项目&lt;/strong&gt;
+&lt;br&gt;&lt;br&gt;
+1.打开Xcode,用快捷键&lt;code&gt;Command+Shift+N&lt;/code&gt; 就会出现创建工程的视图框，一般选择&lt;code&gt;Page-Base Application&lt;/code&gt; ;如图:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mrjackl.github.io/img/iOS_create_project01.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.填写项目名称 (这里取名Demo);同时这里需要Language(Objective-c 或者 Swift),Device(iPhone,iPad,Universal) ,初学者可以先选择（&lt;code&gt;Objective-C ,iPhone&lt;/code&gt;）即可。如图:
+&lt;img src=&#34;http://mrjackl.github.io/img/iOS_create_project02.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3.最后一步是选择项目文件保存的位置，建议直接保存在桌面；走完这3步之后，你的第一个iOS项目就正式创建成功了！&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.项目结构&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;创建完成之后，项目结构如下图:
+&lt;img src=&#34;http://mrjackl.github.io/img/iOS_create_project03.png&#34; alt=&#34;Example image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;你在桌面也可以看到Demo文件夹，以及内部的文件。&lt;br&gt;
+&lt;br&gt;AppDelegate: 程序启动执行文件 ;
+&lt;br&gt;Assets.xcassets 程序Icon,启动图片，切图等放置处 ;
+&lt;br&gt;Info.plist 程序配置文件&lt;/p&gt;
+</description>
     </item>
     
     <item>
