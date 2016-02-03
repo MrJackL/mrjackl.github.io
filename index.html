@@ -197,7 +197,24 @@
 
     <span class="post-date">Fri, Jan 29, 2016</span>
 
-    <p>从趣味，成就感说起</p>
+    
+
+<p><br></p>
+
+<blockquote>
+<h4 id="注-本篇文章主要讲ui布局:de08de72347836bba9f1490f2b6d6ebd">注：本篇文章主要讲UI布局</h4>
+</blockquote>
+
+<p>iOS开发里面UI布局尤其重要，因为App一定需要界面去展示内容，那么这里就涉及到各种控件，位置摆放等等。UI布局方式主要分为三种: <strong>纯代码</strong>、<strong>xib</strong>、<strong>storyboard</strong>。(在iOS开发里面，对于哪种是最好的?争议一直没有停止过，表问我哪个最好，自己去掌握这三种方式，找到最合适自己的).接下来我会对这三种方式逐一讲解。</p>
+
+<p><br>
+在 《iOS入门-前言》这篇文章里面已经简单介绍了项目的创建，以及项目结构；如果是iOS初学者</p>
+
+<p><strong>1.纯代码布局</strong></p>
+
+<p><strong>2.xib</strong></p>
+
+<p><strong>3.storyboard</strong></p>
 
   </div>
   
@@ -222,7 +239,7 @@
 
 <p>iOS App的开发主要是涉及到<strong>UI布局、数据处理、使用第三方库、业务逻辑</strong> 。(后面会有对应的文章进行讲解) 对于初学者来说，最快理解iOS的方式就是UI布局，在这个过程中不但可以熟悉iOS的语法、控件，而且能带来最明显的成就感。个人建议初学者，可以多创建一些Demo来练手；</p>
 
-<p>接下来会从iOS开发工具、创建项目、项目结构、程序启动流程进行介绍:</p>
+<p>接下来会对这些部分进行介绍:<strong>iOS开发工具、创建项目、项目结构、程序启动流程 、删掉不用的文件、创建文件</strong>。</p>
 
 <p><strong>1.Xcode</strong></p>
 
@@ -266,12 +283,37 @@
 <br><br>
 Xcode运行程序的快捷键:<code>Command+R</code> ;程序启动时，首先会调用<code>AppDelegate</code>文件中的<code>didFinishLaunchingWithOptions</code>方法;也许你会觉得奇怪，这个方法里面什么内容都没有为什么模拟器里面会有内容呢？</p>
 
-<p>刚才在项目结构里面有提到<code>Info.plist</code>文件，其中<code>Main storyboard file base name</code>就是绑定了<code>Main.storyboard</code>,这就意味着程序启动的时候会自动调用这个文件；</p>
+<p>刚才在项目结构里面有提到<code>Info.plist</code>文件，其中<code>Main storyboard file base name</code>就是绑定了<code>Main.storyboard</code>,这就意味着程序启动的时候会自动调用这个文件；<code>Main.storyboard</code>文件中包含的是controller，而且会指定某一个controller为初始化视图(Is Initial View Controller);在Demo中默认初始化视图<code>RootViewController</code>.</p>
 
-<p><br>
+<p><br></p>
+
+<p><strong>5.删掉不用的文件</strong>
+<br><br>
+初学者对于创建项目自动生成的文件不太了解，其实这些自动生成的viewController文件都可以删除，去创建自定义的viewController;甚至<code>Main.storyboard</code>都可以删除，我建议初学者将这些自动生成的文件都删除，自己手动来创建文件，并且暂时先不要用storyboard。这样做的原因是先跳过storyboard的使用,用最简单的项目结构来开始学习。如下图文件都删掉:
+<img src="/img/iOS_create_project04.png" alt="Example image" /></p>
+
+<p>然后编辑Info.plist文件，删掉对<code>Main.storyboard</code>文件的引用.如图:
+<img src="/img/iOS_create_project05.png" alt="Example image" /></p>
+
+<p>这个时候再运行项目,就会发现之前的页面都没有了。是的，那是因为自动生成的页面都被干掉了，就是一个干干净净的项目了。</p>
+
+<p><strong>6.创建文件</strong>
+<br><br>
+好，现在卷起袖子，开始创建自己第一个ViewController,在项目中鼠标点击Demo文件夹,然后用快捷键<code>Command+N</code>,就会弹出创建文件的框，按照如下图操作即可:
+<img src="/img/iOS_create_project06.png" alt="Example image" />
+<img src="/img/iOS_create_project07.png" alt="Example image" /></p>
+
+<p>文件创建成功后，在项目里面就会看见刚才创建的文件了,如图:
+<img src="/img/iOS_create_project08.png" alt="Example image" /></p>
+
+<p><br><br>
 <strong>小结</strong></p>
 
+<p>操作到这里就基本掌握了项目的创建,文件结构，创建文件等等操作，接下来就可以在创建的文件里面写自己的代码了。在后面的文章里面，会介绍进一步介绍要做什么、怎么做。</p>
+
 <p>初学者只需按照以上步骤手动操作即可，不必太过刻意去理解每个文件的含义。很多路都是靠走出来的，只有不停的动手操作才会碰到问题，然后去解决问题，最终就有了思考，有了理论。</p>
+
+<p>题外话: 有很多想学习iOS开发的同学，开始热情很高，但是坚持下来的人并不多；为什么呢？很大原因是没有过来人教该按照什么线路去学习，就会导致在学习的过程中缺少成就感，兴趣一步一步被吞噬。无论是基于兴趣还是工作，个人觉得多一份激情和热情，带来的效果是不一样的。</p>
 
   </div>
   
